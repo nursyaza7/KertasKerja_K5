@@ -1,0 +1,65 @@
+<html>
+<style>
+  body{
+  background-color:lightpink;
+}
+</style>
+<marquee><h1>Welcome To Kalkulator Syareen</h1></marquee>
+<center>
+<img src="kalkulator.gif" name="kalkulator" style="width:400px;height:300;"/>
+</center>
+<center><h3>
+Nombor Pertama:
+<input type="text" id="no1"/><br><br>
+Nombor Kedua:
+<input type="text" id="no2"/>
+</h3>
+<br>
+<select id="operasi">
+<option>+</option>
+<option>-</option>
+<option>/</option>
+<option>*</option>
+</select>
+
+<button onClick="papar()">Answer</button>
+<a href="formcatat.php" class="button">Simpan</a>
+<p id="catatan"></p>
+<p id="total"></p>
+<script language="javascript">
+
+function papar()
+{
+	var no1=parseInt(document.getElementById('no1').value);
+	var no2=parseInt(document.getElementById('no2').value);
+	var operasi=document.getElementById('operasi').value;
+
+	document.getElementById('no1').innerHTML=no1;
+	document.getElementById('no1').innerHTML=no2;
+if(operasi == "+")
+{
+	document.getElementById('catatan').innerHTML="Hasil operasi ialah Tambah";
+	var num1=no1+no2;
+	document.getElementById('total').innerHTML=num1;
+}
+else if(operasi == "-")
+{
+	document.getElementById('catatan').innerHTML="Hasil operasi ialah Tolak";
+	var num1=no1-no2;
+	document.getElementById('total').innerHTML=num1;
+}
+else if(operasi == "/")
+{
+	document.getElementById('catatan').innerHTML="Hasil operasi ialah Bahagi";
+	var num1=no1/no2;
+	document.getElementById('total').innerHTML=num1;
+}
+else
+{
+	document.getElementById('catatan').innerHTML="Hasil operasi ialah Darab";
+	var num1=no1*no2;
+	document.getElementById('total').innerHTML=num1;
+}
+}
+</script>
+</html>
